@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Download } from "lucide-react";
 import logo from "@/assets/dhadhan-logo.jpg";
 import { Button } from "@/components/ui/button";
 
@@ -10,6 +10,12 @@ const navLinks = [
   { name: "Preview", href: "#preview" },
   { name: "About", href: "#about" },
 ];
+
+const openWhatsAppForAPK = () => {
+  const phoneNumber = "254794940900";
+  const message = encodeURIComponent("Hi! I want to test the Dhadhan App. I have an Android device.");
+  window.open(`https://wa.me/${phoneNumber}?text=${message}`, "_blank");
+};
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -58,14 +64,24 @@ const Header = () => {
           ))}
         </nav>
 
-        {/* Desktop CTA */}
-        <Button
-          variant="default"
-          className="hidden md:inline-flex"
-          onClick={scrollToSignup}
-        >
-          Join the Waitlist
-        </Button>
+        {/* Desktop CTAs */}
+        <div className="hidden md:flex items-center gap-3">
+          <Button
+            variant="outline"
+            size="sm"
+            onClick={openWhatsAppForAPK}
+            className="border-fresh text-fresh hover:bg-fresh hover:text-white"
+          >
+            <Download className="w-4 h-4 mr-2" />
+            Install APK
+          </Button>
+          <Button
+            variant="default"
+            onClick={scrollToSignup}
+          >
+            Join the Waitlist
+          </Button>
+        </div>
 
         {/* Mobile Menu Button */}
         <button
@@ -96,7 +112,15 @@ const Header = () => {
                   {link.name}
                 </button>
               ))}
-              <Button variant="default" onClick={scrollToSignup} className="mt-2">
+              <Button
+                variant="outline"
+                onClick={openWhatsAppForAPK}
+                className="border-fresh text-fresh hover:bg-fresh hover:text-white"
+              >
+                <Download className="w-4 h-4 mr-2" />
+                Install APK
+              </Button>
+              <Button variant="default" onClick={scrollToSignup}>
                 Join the Waitlist
               </Button>
             </nav>
