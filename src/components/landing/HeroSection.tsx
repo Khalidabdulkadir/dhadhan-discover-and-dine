@@ -120,23 +120,23 @@ const HeroSection = () => {
             </motion.div>
           </motion.div>
 
-          {/* Phone Mockup */}
+          {/* Phone Mockup - Hidden on mobile */}
           <motion.div
             initial={{ opacity: 0, y: 40, rotate: 3 }}
             animate={{ opacity: 1, y: 0, rotate: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="relative flex justify-center lg:justify-end"
+            className="relative hidden md:flex justify-center lg:justify-end"
           >
             <div className="relative">
               {/* Glow effect */}
-              <div className="absolute inset-0 bg-gradient-to-br from-brand/40 to-fresh/30 blur-3xl rounded-full scale-90" />
+              <div className="absolute inset-0 bg-gradient-to-br from-brand/30 to-fresh/20 blur-3xl rounded-full scale-75" />
 
               {/* Phone image */}
               <motion.img
                 src={appMockup}
                 alt="Dhadhan App Preview"
-                className="relative w-72 sm:w-80 md:w-[400px] lg:w-[450px] drop-shadow-2xl rounded-3xl"
-                animate={{ y: [0, -12, 0] }}
+                className="relative w-56 md:w-64 lg:w-72 xl:w-80 drop-shadow-2xl rounded-2xl"
+                animate={{ y: [0, -8, 0] }}
                 transition={{
                   duration: 4,
                   repeat: Infinity,
@@ -149,33 +149,25 @@ const HeroSection = () => {
                 initial={{ opacity: 0, scale: 0 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 0.8 }}
-                className="absolute -left-6 top-1/4 bg-card p-4 rounded-2xl shadow-lg border border-border/50"
+                className="absolute -left-4 top-1/4 bg-card p-3 rounded-xl shadow-lg border border-border/50"
               >
-                <span className="text-3xl">🍕</span>
+                <span className="text-xl">🍕</span>
               </motion.div>
               <motion.div
                 initial={{ opacity: 0, scale: 0 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 1 }}
-                className="absolute -right-4 top-1/3 bg-card p-4 rounded-2xl shadow-lg border border-border/50"
+                className="absolute -right-2 top-1/3 bg-card p-3 rounded-xl shadow-lg border border-border/50"
               >
-                <span className="text-3xl">🍔</span>
+                <span className="text-xl">🍔</span>
               </motion.div>
               <motion.div
                 initial={{ opacity: 0, scale: 0 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 1.2 }}
-                className="absolute -left-2 bottom-1/3 bg-card p-4 rounded-2xl shadow-lg border border-border/50"
+                className="absolute -left-2 bottom-1/3 bg-card p-3 rounded-xl shadow-lg border border-border/50"
               >
-                <span className="text-3xl">🥗</span>
-              </motion.div>
-              <motion.div
-                initial={{ opacity: 0, scale: 0 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ delay: 1.4 }}
-                className="absolute right-4 bottom-1/4 bg-card p-4 rounded-2xl shadow-lg border border-border/50"
-              >
-                <span className="text-3xl">🍜</span>
+                <span className="text-xl">🥗</span>
               </motion.div>
             </div>
           </motion.div>
