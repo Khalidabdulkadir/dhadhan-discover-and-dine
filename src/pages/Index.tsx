@@ -2,6 +2,7 @@ import Header from "@/components/landing/Header";
 import HeroSection from "@/components/landing/HeroSection";
 import FeaturesSection from "@/components/landing/FeaturesSection";
 import AppPreviewSection from "@/components/landing/AppPreviewSection";
+import RestaurantPartnersSection from "@/components/landing/RestaurantPartnersSection";
 import SignupSection from "@/components/landing/SignupSection";
 import AboutSection from "@/components/landing/AboutSection";
 import Footer from "@/components/landing/Footer";
@@ -22,6 +23,9 @@ const Index = () => {
 
         {/* App Preview / Food Gallery Section */}
         <AppPreviewSection />
+
+        {/* Restaurant Partners Section */}
+        <RestaurantPartnersSection />
 
         {/* Email Signup Section */}
         <SignupSection />
