@@ -1,34 +1,48 @@
 import { motion } from "framer-motion";
-import { MapPin, Menu, Percent, MessageSquare } from "lucide-react";
+import { Menu, BadgeCheck, Film, ShoppingBag, Percent, MessageSquare } from "lucide-react";
 
 const features = [
   {
-    icon: MapPin,
-    title: "Browse Local Restaurants",
+    icon: Menu,
+    title: "Browse Restaurant Menus",
     description:
-      "Find amazing eateries near you with real-time location-based search and filters.",
+      "Explore complete menus with photos, prices, and details from your favorite local restaurants.",
     color: "brand",
   },
   {
-    icon: Menu,
-    title: "Explore Menus & Prices",
+    icon: Film,
+    title: "Watch Food Reels",
     description:
-      "View complete menus with photos, prices, and detailed descriptions before you visit.",
+      "Discover mouthwatering food videos and get inspired by trending dishes in your area.",
     color: "fresh",
   },
   {
-    icon: Percent,
-    title: "Get Exclusive Discounts",
+    icon: ShoppingBag,
+    title: "Order Instantly",
     description:
-      "Unlock special offers and deals available only to Dhadhan App users.",
+      "See something you love? Order it right away with just a few taps. Fast and seamless.",
     color: "warm",
   },
   {
+    icon: BadgeCheck,
+    title: "Verified Restaurants",
+    description:
+      "Look for the blue tick to find trusted, verified restaurants with quality assurance.",
+    color: "brand",
+  },
+  {
+    icon: Percent,
+    title: "Exclusive Discounts",
+    description:
+      "Unlock special offers and deals available only to Dhadhan App users.",
+    color: "fresh",
+  },
+  {
     icon: MessageSquare,
-    title: "Read Community Reviews",
+    title: "Community Reviews",
     description:
       "Make informed decisions with honest reviews from fellow food lovers.",
-    color: "brand",
+    color: "warm",
   },
 ];
 
@@ -57,7 +71,7 @@ const FeaturesSection = () => {
         </motion.div>
 
         {/* Features Grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
           {features.map((feature, index) => (
             <motion.div
               key={feature.title}
