@@ -1,12 +1,12 @@
 import { motion } from "framer-motion";
-import foodBurger from "@/assets/food-burger.png";
-import foodBowl from "@/assets/food-bowl.png";
-import foodPizza from "@/assets/food-pizza.png";
+import foodUgali from "@/assets/food-ugali.png";
+import foodChapati from "@/assets/food-chapati.png";
+import foodAnjera from "@/assets/food-anjera.png";
 
 const foods = [
-  { image: foodBurger, name: "Gourmet Burgers", tag: "Popular" },
-  { image: foodBowl, name: "Healthy Bowls", tag: "Trending" },
-  { image: foodPizza, name: "Authentic Pizza", tag: "Fan Favorite" },
+  { image: foodUgali, name: "Ugali & Nyama", tag: "Kenyan Classic", origin: "🇰🇪 Kenya" },
+  { image: foodChapati, name: "Fresh Chapati", tag: "East African", origin: "🇰🇪 Kenya" },
+  { image: foodAnjera, name: "Anjera & Suugo", tag: "Somali Favorite", origin: "🇸🇴 Somalia" },
 ];
 
 const AppPreviewSection = () => {
@@ -22,13 +22,13 @@ const AppPreviewSection = () => {
           className="text-center max-w-2xl mx-auto mb-16"
         >
           <span className="text-sm font-semibold text-fresh uppercase tracking-wide">
-            Food Gallery
+            Local Food Gallery
           </span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mt-3 mb-4">
-            Discover <span className="text-gradient-brand">Amazing Cuisines</span>
+            Taste of <span className="text-gradient-brand">East Africa</span>
           </h2>
           <p className="text-muted-foreground text-lg">
-            From local favorites to international delights, find it all on Dhadhan App.
+            Authentic Kenyan & Somali cuisines — from Ugali to Anjera, discover your local favorites.
           </p>
         </motion.div>
 
@@ -62,7 +62,7 @@ const AppPreviewSection = () => {
               {/* Content */}
               <div className="absolute bottom-0 left-0 right-0 p-6">
                 <h3 className="text-xl font-bold text-card mb-1">{food.name}</h3>
-                <p className="text-card/70 text-sm">Available near you</p>
+                <p className="text-card/70 text-sm">{food.origin} • Available near you</p>
               </div>
             </motion.div>
           ))}
