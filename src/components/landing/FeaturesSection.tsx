@@ -34,7 +34,7 @@ const features = [
 
 const FeaturesSection = () => {
   return (
-    <section className="py-20 md:py-28 bg-background">
+    <section id="features" className="py-24 md:py-32 bg-background">
       <div className="container">
         {/* Section Header */}
         <motion.div

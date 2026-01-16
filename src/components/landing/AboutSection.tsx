@@ -4,7 +4,7 @@ import logo from "@/assets/dhadhan-logo.jpg";
 
 const AboutSection = () => {
   return (
-    <section className="py-20 md:py-28 bg-background">
+    <section id="about" className="py-24 md:py-32 bg-background">
       <div className="container">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Content */}
