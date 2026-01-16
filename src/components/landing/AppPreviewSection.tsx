@@ -2,11 +2,13 @@ import { motion } from "framer-motion";
 import foodUgali from "@/assets/food-ugali.png";
 import foodChapati from "@/assets/food-chapati.png";
 import foodAnjera from "@/assets/food-anjera.png";
+import foodInjera from "@/assets/food-injera.png";
 
 const foods = [
   { image: foodUgali, name: "Ugali & Nyama", tag: "Kenyan Classic", origin: "🇰🇪 Kenya" },
   { image: foodChapati, name: "Fresh Chapati", tag: "East African", origin: "🇰🇪 Kenya" },
   { image: foodAnjera, name: "Anjera & Suugo", tag: "Somali Favorite", origin: "🇸🇴 Somalia" },
+  { image: foodInjera, name: "Injera & Wot", tag: "Ethiopian Delight", origin: "🇪🇹 Ethiopia" },
 ];
 
 const AppPreviewSection = () => {
@@ -28,12 +30,12 @@ const AppPreviewSection = () => {
             Taste of <span className="text-gradient-brand">East Africa</span>
           </h2>
           <p className="text-muted-foreground text-lg">
-            Authentic Kenyan & Somali cuisines — from Ugali to Anjera, discover your local favorites.
+            Order from top-rated local restaurants — Kenyan, Somali & Ethiopian cuisines delivered to you with just a few taps.
           </p>
         </motion.div>
 
         {/* Food Cards */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
           {foods.map((food, index) => (
             <motion.div
               key={food.name}
