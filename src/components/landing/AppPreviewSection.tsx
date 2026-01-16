@@ -11,7 +11,7 @@ const foods = [
 
 const AppPreviewSection = () => {
   return (
-    <section className="py-20 md:py-28 bg-secondary/50">
+    <section id="preview" className="py-24 md:py-32 bg-secondary/50">
       <div className="container">
         {/* Section Header */}
         <motion.div
