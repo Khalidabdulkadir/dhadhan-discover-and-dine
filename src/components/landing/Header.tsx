@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Download } from "lucide-react";
-import logo from "@/assets/dhadhan-logo.jpg";
+import logo from "@/assets/dhadhan-logo.png";
 import { Button } from "@/components/ui/button";
 
 const navLinks = [

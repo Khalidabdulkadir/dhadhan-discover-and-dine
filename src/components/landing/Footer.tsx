@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
-import { Instagram, Facebook, Twitter, Mail } from "lucide-react";
-import logo from "@/assets/dhadhan-logo.jpg";
+import { Instagram, Facebook, Twitter, Phone } from "lucide-react";
+import { Link } from "react-router-dom";
+import logo from "@/assets/dhadhan-logo.png";
 
 const Footer = () => {
   return (
@@ -67,11 +68,11 @@ const Footer = () => {
               <Twitter className="w-5 h-5" />
             </a>
             <a
-              href="mailto:hello@dhadhanapp.com"
+              href="tel:+254794940900"
               className="w-10 h-10 rounded-full bg-background/10 flex items-center justify-center hover:bg-brand hover:text-brand-foreground transition-colors duration-300"
-              aria-label="Email"
+              aria-label="Phone"
             >
-              <Mail className="w-5 h-5" />
+              <Phone className="w-5 h-5" />
             </a>
           </motion.div>
         </div>
@@ -87,12 +88,12 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-background/50">
             <p>© 2025 Dhadhan App. All rights reserved.</p>
             <div className="flex items-center gap-6">
-              <a
-                href="#"
+              <Link
+                to="/privacy-policy"
                 className="hover:text-background transition-colors duration-200"
               >
                 Privacy Policy
-              </a>
+              </Link>
               <a
                 href="#"
                 className="hover:text-background transition-colors duration-200"
@@ -100,7 +101,7 @@ const Footer = () => {
                 Terms of Service
               </a>
               <a
-                href="mailto:hello@dhadhanapp.com"
+                href="tel:+254794940900"
                 className="hover:text-background transition-colors duration-200"
               >
                 Contact

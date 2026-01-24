@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Heart, Users, Utensils } from "lucide-react";
-import logo from "@/assets/dhadhan-logo.jpg";
+import logo from "@/assets/dhadhan-logo.png";
 
 const AboutSection = () => {
   return (
