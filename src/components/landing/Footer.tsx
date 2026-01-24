@@ -100,6 +100,12 @@ const Footer = () => {
               >
                 Terms of Service
               </a>
+              <Link
+                to="/delete-account"
+                className="hover:text-background transition-colors duration-200"
+              >
+                Delete Account
+              </Link>
               <a
                 href="tel:+254794940900"
                 className="hover:text-background transition-colors duration-200"
